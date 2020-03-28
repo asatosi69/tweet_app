@@ -19,11 +19,13 @@ Rails.application.routes.draw do
   post "/posts/:id/update" => "posts#update"
   delete "/posts/:id/destroy" => "posts#destroy"
 
-
-
+  post "likes/:id/create" => "likes#create"
+  delete "likes/:id/destroy" => "likes#destroy"
 
   get "/" => "home#top"
   get "/about" => "home#about"
+  
+  get "users/:id/likes" => "users#likes"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
